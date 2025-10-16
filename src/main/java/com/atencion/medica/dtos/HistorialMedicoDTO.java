@@ -1,7 +1,9 @@
 package com.atencion.medica.dtos;
 
-import java.util.List;
+import lombok.Data;
 
+import java.util.List;
+@Data
 public class HistorialMedicoDTO {
     private String historialClinicoId;
     private String nombrePaciente;

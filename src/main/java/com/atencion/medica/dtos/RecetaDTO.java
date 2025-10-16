@@ -1,9 +1,10 @@
 package com.atencion.medica.dtos;
 
 import com.atencion.medica.enums.EstadoReceta;
+import lombok.Data;
 
 import java.util.Date;
-
+@Data
 public class RecetaDTO {
     private Long id;
     private String medicamento;

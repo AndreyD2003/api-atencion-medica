@@ -1,7 +1,9 @@
 package com.atencion.medica.dtos;
 
-import java.util.Date;
+import lombok.Data;
 
+import java.util.Date;
+@Data
 public class PacienteDTO {
     private Long id;
     private String nombre;
