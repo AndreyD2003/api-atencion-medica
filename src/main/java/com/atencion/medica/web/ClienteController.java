@@ -26,24 +26,4 @@ public class ClienteController {
         return ResponseEntity.ok(historial);
     }
 
-    @PostMapping
-    public ResponseEntity<MedicoDTO> crearMedico(@RequestBody MedicoDTO medicoDTO) {
-        return new ResponseEntity<>(medicoService.crearMedico(medicoDTO), HttpStatus.CREATED);
-    }
-
-    @GetMapping
-    public ResponseEntity<List<MedicoDTO>> listarMedicos() {
-        return ResponseEntity.ok(medicoService.obtenerTodosLosMedicos());
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<MedicoDTO> obtenerMedicoPorId(@PathVariable Long id) {
-        return ResponseEntity.ok(medicoService.obtenerMedicoPorId(id));
-    }
-
-    @PostMapping("/recetas")
-    public ResponseEntity<RecetaDTO> crearReceta(@RequestBody RecetaDTO recetaDTO) {
-        RecetaDTO nuevaReceta = medicoService.crearReceta(recetaDTO);
-        return new ResponseEntity<>(nuevaReceta, HttpStatus.CREATED);
-    }
 }
